@@ -36,6 +36,16 @@ get_header();
         <p>   
             <?php comments_number('(0) Comentários', '(1) Comentário', '(%) Comentários'); ?>
         </p>
+        
+        <hr/>
+        
+        <?php 
+        
+        if(comments_open()){
+            comments_template();
+        }
+        
+        ?>
        
         
     </article>
@@ -52,8 +62,6 @@ get_header();
         <div class="pagina_proxima">
             <?php next_post_link()  ?>
         </div>
-        
-        
     </div>
     
 </div>

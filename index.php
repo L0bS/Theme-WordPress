@@ -42,7 +42,6 @@ get_header();
             
             <a href="<?php the_permalink(); ?>">LEIA MAIS</a>
         </p>
-       
         
     </article>
     
