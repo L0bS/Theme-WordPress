@@ -3,16 +3,65 @@ body{
 }
 .cs_menu ul,
 .cs_menu li{
+    
     list-style: none;
+    background-color: red;
+    margin: 0 0 15px 0;
+    padding: 0 5px 0 0;
+    font-size: 25px;
+    height: 35px;
+    width: 100%;
+    
 }
 .cs_menu li{
     display: inline;
 }
+nav .cs_menu{
+    text-decoration:none;
+} 
 .container{
-    width: 70%;
+    width: 69%;
     float: left;
+    
 }
 sidebar{
     width: 30%;
     float: left;
+    margin-left: 5px;
+    
+    
+}
+article{
+    border-bottom: 2px solid black;
+    background-color: white;  
+    padding: 10px;
+    margin-bottom: 10px;
+}
+article .post_thumbnail{
+    float: left;
+    margin-right: 15px;
+  
+   
+}
+
+article .cs_img{
+    width: 150px;
+    height: 150px;
+    
+}
+.paginacao{
+    margin: 30px 0 30px 0;
+}
+.pagina_anterior{
+    float: left;
+}
+.pagina_proxima{
+    float: right
+}
+footer{
+    width: 100%;
+    height: 20px;
+    background-color: black;
+    margin-top: 50px;
+  
 }

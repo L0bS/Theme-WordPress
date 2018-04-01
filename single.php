@@ -7,22 +7,18 @@ get_header();
     <?php if(have_posts()): ?>
     <?php while(have_posts()):  ?>
     <?php the_post(); ?>
-    <!--adicionando as imagem na pag-->
-    <article>  
-        <?php if(has_post_thumbnail()): ?>
-        
-        <a href="<?php the_permalink(); ?>" class="post_thumbnail">
 
-                <?php the_post_thumbnail('full', array( 'class' => 'cs_img')); ?>
-
-            </a>
-        <?php endif; ?>
+    <article>
         <!--colocando o titulo e linkando ele-->
-        <h2>
-            <a href="<?php the_permalink(); ?>">
+                <h2>
                 <?php the_title(); ?>
-            </a>
-        </h2>
+                </h2>
+            <!--adicionando as imagem na pag-->
+        <?php if(has_post_thumbnail()): ?>
+                <?php the_post_thumbnail('full'); ?>
+        <?php endif; ?>
+        
+
         <!--Colocando o nome do autor, data e categoria-->
         <p>
             <?php echo get_the_date(); ?> |
@@ -33,14 +29,12 @@ get_header();
         <!--Exibindo o os comentarios dos posts-->
         <p>
             
-            <?php the_excerpt(); ?>
+            <?php the_content(); ?>
             
         </p>
         <!--numeros de comentarios-->
         <p>   
-            <?php comments_number('(0) Comentários', '(1) Comentário', '(%) Comentários'); ?> |
-            
-            <a href="<?php the_permalink(); ?>">LEIA MAIS</a>
+            <?php comments_number('(0) Comentários', '(1) Comentário', '(%) Comentários'); ?>
         </p>
        
         
@@ -52,11 +46,11 @@ get_header();
     <div class="paginacao">
         <!--Proxima página-->
         <div class="pagina_anterior">
-            <?php previous_posts_link('Página Anterior'); ?>
+            <?php previous_post_link(); ?>
         </div>
         <!--Página anterior-->
         <div class="pagina_proxima">
-            <?php next_posts_link('Proxima Página')  ?>
+            <?php next_post_link()  ?>
         </div>
         
         
